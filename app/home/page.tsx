@@ -6,11 +6,9 @@ import { useAuthActions } from "@convex-dev/auth/react";
 import { useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
 import { toast } from "sonner";
-import { Bell } from "lucide-react";
 
 import { api } from "@/convex/_generated/api";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 
 const JobsMap = dynamic(

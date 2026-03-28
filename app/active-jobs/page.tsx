@@ -23,6 +23,18 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 
+type ActiveJob = {
+  _id: Id<"jobs">;
+  title: string;
+  pickupAddress: string;
+  dropAddress?: string;
+  status: string;
+  timeWindow: string;
+  offeredPay: number;
+  cancelRequested?: boolean;
+  senderId: Id<"users">;
+};
+
 export default function ActiveJobsPage() {
   const router = useRouter();
   const { signOut } = useAuthActions();
@@ -36,7 +48,7 @@ export default function ActiveJobsPage() {
   const submitRating = useMutation(api.ratings.submitRating);
   const generateUploadUrl = useMutation(api.storage.generateUploadUrl);
 
-  const [selectedJob, setSelectedJob] = React.useState<any>(null);
+  const [selectedJob, setSelectedJob] = React.useState<ActiveJob | null>(null);
   const [code, setCode] = React.useState("");
   const [dialogOpen, setDialogOpen] = React.useState(false);
   const [photoSent, setPhotoSent] = React.useState(false);
@@ -68,7 +80,7 @@ export default function ActiveJobsPage() {
     });
   }
 
-  function openDeliveryDialog(job: any) {
+  function openDeliveryDialog(job: ActiveJob) {
     setSelectedJob(job);
     setCode("");
     setDropoffFile(null);

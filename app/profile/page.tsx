@@ -237,7 +237,7 @@ export default function ProfilePage() {
 
                     <div className="space-y-3">
                       <h2 className="text-lg font-semibold">Reviews ({reviewList.length})</h2>
-                      {userQueryArgs === "skip" || reviews === undefined ? (
+                      {reviews === undefined ? (
                         <div className="rounded-lg border p-3 text-sm text-muted-foreground">Loading reviews…</div>
                       ) : reviewList.length === 0 ? (
                         <div className="rounded-lg border p-3 text-sm text-muted-foreground">No reviews yet.</div>

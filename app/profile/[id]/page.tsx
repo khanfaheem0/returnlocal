@@ -6,7 +6,7 @@ import { useParams, useRouter } from "next/navigation";
 import { api } from "@/convex/_generated/api";
 import type { Id } from "@/convex/_generated/dataModel";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Star } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
@@ -145,7 +145,7 @@ export default function PublicProfilePage() {
                     {reviews.length === 0 ? (
                         <Card className="bg-surface-container/30 border-none shadow-sm">
                             <CardContent className="p-8 text-center text-on-surface-variant">
-                                This user hasn't received any reviews yet.
+                                This user hasn&apos;t received any reviews yet.
                             </CardContent>
                         </Card>
                     ) : (
@@ -170,7 +170,7 @@ export default function PublicProfilePage() {
                                         </div>
                                         {r.comment && (
                                             <p className="text-sm text-on-surface-variant ml-11 leading-relaxed">
-                                                "{r.comment}"
+                                                &ldquo;{r.comment}&rdquo;
                                             </p>
                                         )}
                                     </CardContent>

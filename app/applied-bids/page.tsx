@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import { Authenticated, AuthLoading, Unauthenticated, useMutation, useQuery } from "convex/react";
-import { useAuthActions } from "@convex-dev/auth/react";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 
@@ -13,7 +12,6 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 export default function AppliedBidsPage() {
   const router = useRouter();
-  const { signOut } = useAuthActions();
 
   const bids = useQuery(api.bids.listMyPendingBids);
   const withdrawBid = useMutation(api.bids.withdrawBid);

@@ -105,6 +105,10 @@ function SignInPageInner() {
               </Button>
 
               <div className="text-xs text-muted-foreground">
+                Tip: after submitting, check your browser console for the magic link.
+              </div>
+
+              <div className="text-xs text-muted-foreground">
                 <Link className="underline" href="/home">
                   Continue without signing in
                 </Link>

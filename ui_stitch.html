@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#7a4300",
+              "error-dim": "#9f0519",
+              "tertiary-fixed-dim": "#edc600",
+              "primary-dim": "#005a4d",
+              "outline-variant": "#7eb8b2",
+              "on-primary": "#c2ffef",
+              "on-error-container": "#570008",
+              "secondary-fixed-dim": "#ffb470",
+              "secondary-container": "#ffc697",
+              "primary-fixed": "#61f4d8",
+              "on-primary-fixed-variant": "#006455",
+              "on-secondary-fixed": "#512a00",
+              "on-tertiary-container": "#594a00",
+              "surface": "#d4fffa",
+              "on-primary-container": "#00594c",
+              "surface-bright": "#d4fffa",
+              "inverse-surface": "#001110",
+              "surface-dim": "#88e4dc",
+              "on-background": "#003532",
+              "primary": "#006859",
+              "tertiary-dim": "#5f4e00",
+              "on-secondary": "#fff0e6",
+              "surface-container-low": "#bbfdf6",
+              "surface-container-high": "#a2f1e9",
+              "error-container": "#fb5151",
+              "on-secondary-container": "#6d3b00",
+              "tertiary-container": "#fdd400",
+              "surface-container": "#adf6ee",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-fixed": "#fdd400",
+              "on-tertiary": "#fff2ce",
+              "secondary-fixed": "#ffc697",
+              "on-tertiary-fixed-variant": "#645300",
+              "secondary-dim": "#794200",
+              "secondary": "#8a4c00",
+              "primary-container": "#61f4d8",
+              "on-tertiary-fixed": "#433700",
+              "surface-container-highest": "#97ece4",
+              "tertiary": "#6d5a00",
+              "inverse-primary": "#6bfde0",
+              "surface-variant": "#97ece4",
+              "on-error": "#ffefee",
+              "inverse-on-surface": "#6ea7a2",
+              "on-surface": "#003532",
+              "primary-fixed-dim": "#4fe5ca",
+              "background": "#d4fffa",
+              "surface-tint": "#006859",
+              "error": "#b31b25",
+              "on-primary-fixed": "#00443a",
+              "on-surface-variant": "#296560",
+              "outline": "#47807c"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+      }
+      .three-d-button {
+        box-shadow: 0 4px 0px 0px #7a4300;
+        transition: all 0.15s ease;
+      }
+      .three-d-button:active {
+        transform: translateY(2px);
+        box-shadow: 0 2px 0px 0px #7a4300;
+      }
+      .custom-scroll::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface min-h-screen pb-32">
+<!-- TopAppBar Shell -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-[#d4fffa]/80 backdrop-blur-xl shadow-[0px_40px_40px_rgba(0,53,50,0.06)]">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full overflow-hidden ring-2 ring-primary-fixed ring-offset-2 ring-offset-surface-container">
+<img alt="User profile photo" class="w-full h-full object-cover" data-alt="portrait of a friendly smiling young man with warm lighting in a modern bright setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFO8kIaP-gFu-HZ_1OBySEnA6T9eNw6zHnnxCFrJ2JmKsGZm8n0l2u0zyhgrukw9hLXITl0bIcdHa3Rdxa2V1rvmWtJXqQWF-4XLr4qP3zwmib8NYT2eOuu8oRKXHg7qD2WM3QCGHNYu0z1_WCqyaHABQGzd-NN5eBnGC3Bx5-geVD0fZHkPLbNwkyU7OQUAHHMwZ3AneU4ca6GCopkPVvsVO8ObM4kD1pr9d8Y4cnHlBkbVWywVH7In7SLv7ABHhzukRXUZ2rD8Dl"/>
+</div>
+<div>
+<p class="text-[10px] font-bold text-primary uppercase tracking-widest">Hi, Marcus!</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<p class="text-xs font-medium text-on-surface-variant">Brooklyn, NY</p>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<h1 class="text-xl font-bold tracking-tight text-[#006859]">ReturnLocal</h1>
+<div class="p-2 rounded-full hover:bg-[#97ece4]/50 transition-all duration-300">
+<span class="material-symbols-outlined text-primary">notifications</span>
+</div>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-2xl mx-auto space-y-8">
+<!-- Welcome Hero & Toggle Section -->
+<section class="space-y-6">
+<div class="space-y-2">
+<h2 class="text-4xl font-headline font-extrabold text-on-background tracking-tight">
+                    Find <span class="text-primary italic">returns</span> near you.
+                </h2>
+<p class="text-on-surface-variant leading-relaxed">32 packages waiting for a ride in your neighborhood.</p>
+</div>
+<!-- View Toggle -->
+<div class="flex p-1.5 bg-surface-container-high rounded-full w-fit">
+<button class="px-6 py-2.5 rounded-full text-sm font-bold bg-tertiary-container text-on-tertiary-container shadow-sm transition-all duration-300 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+                    Feed
+                </button>
+<button class="px-6 py-2.5 rounded-full text-sm font-bold text-on-surface-variant hover:text-primary transition-all duration-300 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">map</span>
+                    Map
+                </button>
+</div>
+</section>
+<!-- Bento Jobs Grid/Feed -->
+<section class="grid grid-cols-1 gap-4">
+<!-- Job Card 1 -->
+<div class="glass-card rounded-lg p-6 flex flex-col gap-6 ring-1 ring-secondary/10 shadow-sm relative overflow-hidden group">
+<!-- Background Accent Blur -->
+<div class="absolute -right-10 -top-10 w-32 h-32 bg-primary-container/20 rounded-full blur-3xl transition-transform group-hover:scale-150 duration-500"></div>
+<div class="flex justify-between items-start z-10">
+<div class="flex gap-4">
+<div class="w-14 h-14 rounded-2xl bg-secondary-container flex items-center justify-center text-secondary shadow-inner relative overflow-visible">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">package_2</span>
+<div class="absolute -top-2 -right-2 bg-tertiary text-[10px] font-bold text-on-tertiary px-2 py-0.5 rounded-full shadow-sm">SMALL</div>
+</div>
+<div>
+<h3 class="font-headline font-bold text-lg text-on-background">Zola Wedding Registry</h3>
+<p class="text-xs font-medium text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">near_me</span> 0.4 miles away
+                            </p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-2xl font-black text-primary">$4.50</p>
+<p class="text-[10px] font-bold text-secondary uppercase tracking-wider">Estimate</p>
+</div>
+</div>
+<div class="flex items-center justify-between z-10">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center ring-2 ring-white">
+<span class="material-symbols-outlined text-[14px] text-primary">eco</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center ring-2 ring-white">
+<span class="material-symbols-outlined text-[14px] text-secondary">flash_on</span>
+</div>
+</div>
+<button class="bg-primary text-on-primary px-5 py-2 rounded-full text-sm font-bold shadow-md hover:bg-primary-dim transition-colors">
+                        Accept Job
+                    </button>
+</div>
+</div>
+<!-- Job Card 2 (Large) -->
+<div class="glass-card rounded-lg p-6 flex flex-col gap-6 ring-1 ring-secondary/10 shadow-sm relative overflow-hidden group">
+<div class="absolute -left-10 -bottom-10 w-32 h-32 bg-secondary-container/20 rounded-full blur-3xl transition-transform group-hover:scale-150 duration-500"></div>
+<div class="flex justify-between items-start z-10">
+<div class="flex gap-4">
+<div class="w-14 h-14 rounded-2xl bg-primary-container flex items-center justify-center text-primary shadow-inner relative">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
+<div class="absolute -top-2 -right-2 bg-secondary text-[10px] font-bold text-white px-2 py-0.5 rounded-full shadow-sm">LARGE</div>
+</div>
+<div>
+<h3 class="font-headline font-bold text-lg text-on-background">Nordstrom Box</h3>
+<p class="text-xs font-medium text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">near_me</span> 1.2 miles away
+                            </p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-2xl font-black text-primary">$8.25</p>
+<p class="text-[10px] font-bold text-secondary uppercase tracking-wider">High Value</p>
+</div>
+</div>
+<div class="flex items-center justify-between z-10">
+<div class="flex items-center gap-2">
+<span class="bg-surface-container-low px-3 py-1 rounded-full text-[10px] font-bold text-on-surface-variant uppercase tracking-tighter">Box Required</span>
+</div>
+<button class="bg-primary text-on-primary px-5 py-2 rounded-full text-sm font-bold shadow-md hover:bg-primary-dim transition-colors">
+                        Accept Job
+                    </button>
+</div>
+</div>
+<!-- Map Glimpse Section -->
+<div class="h-48 rounded-lg overflow-hidden relative shadow-inner">
+<img alt="Nearby Jobs Map" class="w-full h-full object-cover grayscale-[20%] contrast-[90%]" data-alt="abstract stylized map of city streets with soft pastel colors and glowing destination markers" data-location="Brooklyn" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBemivjv_isOjd2QvfjgNPUpAkQ5q4KGfCxAkFy_bMfNwXOTxcik4VkDq5x7UJSRDITtTm5cfVA1hrVap2umRM-1xPagrIpmGhVmhqiY7Jjb6sMiF3tmIKgrpz6rshlg9DB5uvbp-_vfms7kOl_u0neGnsFYKkE-hgXzuhOPGhqxwRZhyvaHtAB_0XX8BIHgNsWtqxOF5zAbJPH9PL34oUyuactDfUCw9Z9u5qS1IQT_oxu_7fEBRjE16utbSIy3Cxk9ICvKMNfybFL"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/40 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 flex justify-between items-center">
+<p class="text-white text-sm font-bold flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-fixed animate-pulse"></span>
+                        3 active clusters nearby
+                    </p>
+<button class="bg-white/20 backdrop-blur-md text-white px-4 py-1.5 rounded-full text-xs font-bold border border-white/30">
+                        Expand Map
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Floating Action Button -->
+<div class="fixed bottom-32 left-1/2 -translate-x-1/2 z-40">
+<button class="three-d-button bg-secondary text-on-secondary px-8 py-4 rounded-full flex items-center gap-3 group">
+<span class="material-symbols-outlined text-white font-bold group-hover:rotate-12 transition-transform">rocket_launch</span>
+<span class="text-lg font-headline font-extrabold tracking-tight">Start Return</span>
+</button>
+</div>
+<!-- BottomNavBar Shell -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-white/70 backdrop-blur-2xl shadow-[0_-10px_40px_rgba(0,53,50,0.08)] rounded-t-[2rem]">
+<!-- Home Tab (Active) -->
+<a class="flex flex-col items-center justify-center bg-[#61f4d8] text-[#003532] rounded-full px-5 py-2 scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="plusJakartaSans font-medium text-[11px]">Home</span>
+</a>
+<!-- Maps Tab -->
+<a class="flex flex-col items-center justify-center text-[#296560] p-2 hover:scale-105 transition-transform" href="#">
+<span class="material-symbols-outlined text-[24px]">map</span>
+<span class="plusJakartaSans font-medium text-[11px]">Maps</span>
+</a>
+<!-- Rewards Tab -->
+<a class="flex flex-col items-center justify-center text-[#296560] p-2 hover:scale-105 transition-transform" href="#">
+<span class="material-symbols-outlined text-[24px]">redeem</span>
+<span class="plusJakartaSans font-medium text-[11px]">Rewards</span>
+</a>
+<!-- Profile Tab -->
+<a class="flex flex-col items-center justify-center text-[#296560] p-2 hover:scale-105 transition-transform" href="#">
+<span class="material-symbols-outlined text-[24px]">person</span>
+<span class="plusJakartaSans font-medium text-[11px]">Profile</span>
+</a>
+</nav>
+</body></html>
